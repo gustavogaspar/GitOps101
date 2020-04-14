@@ -5,18 +5,18 @@ In this this tutorial a full develpment pipeline will be created using a Git Rep
 
 ## Prerequisites - 
 
-* [Creating a Oracle Cloud Infraestructure Trial]()
-* [Creating a Kubernetes Cluster]()
-* [Collecting the required data]()
-* [Creating a DevCS instance]()
+* [Creating a Oracle Cloud Infraestructure Trial](https://www.oracle.com/cloud/free/)
+* [Creating a Kubernetes Cluster](https://www.oracle.com/webfolder/technetwork/tutorials/obe/oci/oke-full/index.html)
+* [Creating a DevCS instance](https://docs.oracle.com/en/cloud/paas/developer-cloud/csdcs/service-setup.html#GUID-8EE9FC19-70A0-4508-A6B1-FB8425C13A91)
+* [Collecting the required data](./requiredinfos.md)
 
 ## Labs 
 
 1. [Lab 100 - Creating a project](Lab100/Lab100.md)
 2. [Lab 200 - Creating a Build job](Lab200/Lab200.md)
-3. [Lab 300 - Creating a Deploy job](Lab300/Lab300.md)
-4. [Lab 400 - Checking the app status with Oracle Cloud Bash](Lab400/Lab400.md)
+3. [Lab 300 - Configuring Oracle Cloud Bash](Lab300/Lab300.md)
+4. [Lab 400 - Creating a Deploy job](Lab400/Lab400.md)
 5. [Lab 500 - Creating a automated pipeline](Lab500/Lab500.md)
 
 
-# Happy Coding!!!
+##### Have Fun!!!
