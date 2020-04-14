@@ -16,7 +16,7 @@ In this this tutorial a full develpment pipeline will be created using a Git Rep
 2. [Lab 200 - Creating a Build job](Lab200/Lab200.md)
 3. [Lab 300 - Configuring Oracle Cloud Bash](Lab300/Lab300.md)
 4. [Lab 400 - Creating a Deploy job](Lab400/Lab400.md)
-5. [Lab 500 - Creating a automated pipeline](Lab500/Lab500.md)
+5. [Lab 500 - Creating an Automated pipeline](Lab500/Lab500.md)
 
 
 ##### Have Fun!!!
