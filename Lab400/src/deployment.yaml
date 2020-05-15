@@ -32,6 +32,8 @@ spec:
         imagePullPolicy: Never
         ports:
         - containerPort: 5000
+      imagePullSecrets:
+        - name: #Here you need to put your secret
         
 # This code was copied from the kubernets getting started guide, for more please access:
 # https://kubernetes.io/blog/2019/07/23/get-started-with-kubernetes-using-python/
