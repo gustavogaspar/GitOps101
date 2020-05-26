@@ -34,3 +34,45 @@ Tenga en cuenta que en este tutorial, configurará el archivo kubeconfig para da
     * instaló y configuró la CLI de Oracle Cloud Infrastructure (versión 2.6.4 o posterior)
 
 * Debe haber instalado y configurado la herramienta de línea de comandos Kubernetes kubectl. Si aún no lo ha hecho, [consulte la documentación de kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
+
+## 1 Iniciando OCI
+
+1- En un navegador, iniciar sesión en Oracle Cloud Infrastructure.
+
+![image](https://user-images.githubusercontent.com/54222755/82903031-ba3f9180-9f36-11ea-88d3-fa73056a82e8.png)
+[Descripcion de la Imagen](https://www.oracle.com/webfolder/technetwork/tutorials/obe/oci/oke-full/files/oci-login-page.txt)
+
+## 2 Definir detalles del clúster
+
+1- En la consola, abra el menú de navegación. En Soluciones y plataforma , vaya a Servicios para desarrolladores y haga clic en            Clústeres de contenedores.
+
+2- Elija un compartimento en el que tenga permiso para trabajar y en el que desee crear tanto el nuevo clúster como los recursos de red    asociados.
+
+![image](https://user-images.githubusercontent.com/54222755/82903509-6e411c80-9f37-11ea-912f-e15a86dd7b6b.png)
+[Descripción de la Imagen](https://www.oracle.com/webfolder/technetwork/tutorials/obe/oci/oke-full/files/oci-console-create-cluster.txt)
+
+3- En la página Clústeres , haga clic en Crear clúster.
+
+4- En el cuadro de diálogo Crear clúster , haga clic en Creación rápida y haga clic en Iniciar flujo de trabajo .
+
+![image](https://user-images.githubusercontent.com/54222755/82903837-f1627280-9f37-11ea-9df5-d96deba2ebdd.png)
+
+5- En la página Crear clúster , cambie el valor del marcador de posición en el campo Nombre e ingrese en su Tutorial Cluster lugar.
+![image](https://user-images.githubusercontent.com/54222755/82904210-85ccd500-9f38-11ea-8649-9ba5c4814439.png)
+
+6- Haga clic en Siguiente para revisar los detalles que ingresó para el nuevo clúster.
+![image](https://user-images.githubusercontent.com/54222755/82904349-ba409100-9f38-11ea-880b-a0e5fc69e9ea.png)
+
+7- En la página Revisar , haga clic en Crear clúster para crear los nuevos recursos de red y el nuevo clúster.
+Verá los diferentes recursos de red que se crean para usted.
+![image](https://user-images.githubusercontent.com/54222755/82904419-d7755f80-9f38-11ea-92af-407eb59fed5d.png)
+
+8- Haga clic en Cerrar para volver a la consola.
+![image](https://user-images.githubusercontent.com/54222755/82904709-3935c980-9f39-11ea-80ad-ac093762e6bc.png)
+
+El nuevo clúster se muestra en la página Detalles del clúster . Cuando se ha creado, el nuevo clúster tiene un estado de Activo
+
+![image](https://user-images.githubusercontent.com/54222755/82904773-4eaaf380-9f39-11ea-9726-48cf7d2e042f.png)
+
+9- En Recursos , seleccione Grupos de nodos y haga clic en el nombre del grupo de nodos en el clúster que acaba de crear (grupo1). En Recursos , seleccione Nodos y desplácese hacia abajo para ver los detalles de los nuevos nodos de trabajo (instancias de proceso) en el grupo de nodos.
+
