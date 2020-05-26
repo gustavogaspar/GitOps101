@@ -1,5 +1,5 @@
 # GitOps 101
-Esta es una guía para principiantes para aquellos que estén interesados ​​en GitOps utilizando Oracle Cloud Infraestructure
+Esta es una guía para principiantes que estén interesados ​​en GitOps utilizando Oracle Cloud Infraestructure
 
 En este tutorial, se creará una tubería de desarrollo completo utilizando un repositorio Git como guía para la ejecución de los trabajos. Al principio, se implementará un backend de Python en un clúster de kubernetes utilizando trabajos manuales, luego se creará una tubería y se vinculará al repositorio de git, para usar las actividades de git como desencadenante para actualizar el backend de Python.
 
