@@ -96,4 +96,64 @@ El nuevo clúster se muestra en la página Detalles del clúster . Cuando se ha 
 
 3- En una ventana de terminal, cree un directorio para contener el archivo kubeconfig, dándole al directorio el nombre y la ubicación predeterminados esperados $HOME/.kube. Por ejemplo, en Linux, ingrese el siguiente comando (o cópielo y péguelo desde el cuadro de diálogo Acceda a su clúster ): 
 
-`    $ mkdir -p $ INICIO / .kube                                                  `
+`    $ mkdir -p $HOME/.kube                                                 `
+
+4- Ejecute el comando CLI de Oracle Cloud Infrastructure para configurar el archivo kubeconfig y guárdelo con el nombre y la ubicación predeterminados esperados de $HOME/.kube/config. Este nombre y ubicación garantizan que el archivo kubeconfig sea accesible para kubectl y el Panel de control de Kubernetes siempre que los ejecute desde una ventana de terminal. Por ejemplo, en Linux, ingrese el siguiente comando (o cópielo y péguelo desde el cuadro de diálogo Acceda a su clúster ):
+
+` $ oci ce cluster create-kubeconfig --cluster-id ocid1.cluster.oc1.phx.aaaaaaaaae... --file $HOME/.kube/config --region us-phoenix-1 --token-version 2.0.0`
+
+donde ocid1.cluster.oc1.phx.aaaaaaaaae ... es el OCID del clúster actual. Por conveniencia, el comando en el cuadro de diálogo Acceda a su clúster ya incluye el OCID del clúster.
+5- Establezca el valor de la variable de entorno KUBECONFIG en el nombre y la ubicación del archivo kubeconfig. Por ejemplo, en Linux, ingrese el siguiente comando (o cópielo y péguelo desde el cuadro de diálogo Acceda a su clúster ):
+
+` $ export KUBECONFIG=$HOME/.kube/config `
+
+6- Click Close to close the Access Your Cluster dialog.
+
+## Verifique el acceso de Kubectl y Kubernetes Dashboard al clúster
+
+1- Confirme que ya ha instalado kubectl. Si aún no lo ha hecho, consulte la documentación de kubectl .
+2- Verifique que puede usar kubectl para conectarse al nuevo clúster que ha creado. En una ventana de terminal, ingrese el siguiente        comando
+
+`$ kubectl get nodes`
+
+   Verá detalles de los nodos que se ejecutan en el clúster. Por ejemplo:
+   
+   ` NAME              STATUS  ROLES  AGE  VERSION`
+                                                  
+   `10.0.10.2         Ready   node   1d   v1.13.5`
+   
+   ` 10.0.11.2         Ready   node   1d   v1.13.5`
+   
+   ` 10.0.12.2         Ready   node   1d   v1.13.5`
+3- Verifique que puede usar el Panel de control de Kubernetes para conectarse al clúster:
+   a) En un editor de texto, cree un archivo llamado oke-admin-service-account.yaml con el siguiente contenido:
+   
+   `apiVersion: v1
+   
+kind: ServiceAccount
+
+metadata:
+
+  name: oke-admin
+  
+  namespace: kube-system
+  
+---
+
+apiVersion: rbac.authorization.k8s.io/v1beta1
+
+kind: ClusterRoleBinding
+
+metadata:
+
+  name: oke-admin
+  
+roleRef:
+
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: cluster-admin
+subjects:
+  - kind: ServiceAccount
+    name: oke-admin
+    namespace: kube-system`
