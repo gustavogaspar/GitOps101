@@ -76,3 +76,24 @@ El nuevo clúster se muestra en la página Detalles del clúster . Cuando se ha 
 
 9- En Recursos , seleccione Grupos de nodos y haga clic en el nombre del grupo de nodos en el clúster que acaba de crear (grupo1). En Recursos , seleccione Nodos y desplácese hacia abajo para ver los detalles de los nuevos nodos de trabajo (instancias de proceso) en el grupo de nodos.
 
+![image](https://user-images.githubusercontent.com/54222755/82904926-887bfa00-9f39-11ea-8f1d-40f78874ec43.png)
+
+## Configure el archivo kubeconfig para el clúster
+
+1- Confirma que ya has hecho lo siguiente:
+
+ * Genera un par de claves de firma API.
+ 
+ * Se agregó el valor de clave pública del par de claves de firma de API a la Configuración de usuario para su nombre de usuario.
+ 
+ * Instaló y configuró la CLI de Oracle Cloud Infrastructure (versión 2.6.4 o posterior).
+   
+   Si no ha hecho uno o más de los anteriores, o no está seguro, consulte el tema Configuración del acceso al clúster en la        *  .    documentación del Motor de contenedores para Kubernetes.
+
+2- Con la piscinas de nodo página que muestra detalles de pool1, haga clic en Tutorial Cluster en la ruta de navegación. Haga clic en Clúster de acceso para mostrar el cuadro de diálogo Acceda a su clúster y luego haga clic en Acceso local.
+
+![image](https://user-images.githubusercontent.com/54222755/82905239-f9231680-9f39-11ea-9ba1-bef1becc7705.png)
+
+3- En una ventana de terminal, cree un directorio para contener el archivo kubeconfig, dándole al directorio el nombre y la ubicación predeterminados esperados $HOME/.kube. Por ejemplo, en Linux, ingrese el siguiente comando (o cópielo y péguelo desde el cuadro de diálogo Acceda a su clúster ): 
+
+`    $ mkdir -p $ INICIO / .kube                                                  `
