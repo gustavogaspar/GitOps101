@@ -29,7 +29,7 @@ spec:
       containers:
       - name: hello-python
         image: # Here you need to put your own registry information
-        imagePullPolicy: Never
+        imagePullPolicy: Always
         ports:
         - containerPort: 5000
       imagePullSecrets:
